@@ -1,4 +1,4 @@
-console.log('Starting...')
+console.log('✅ㅤIniciando...')
 
 import { join, dirname } from 'path'
 import { createRequire } from "module";
@@ -16,12 +16,12 @@ const { name, author } = require(join(__dirname, './package.json')) // https://w
 const { say } = cfonts
 const rl = createInterface(process.stdin, process.stdout)
 
-say('Lightweight\nWhatsApp Bot', {
+say('The Mystic - Bot\nWhatsApp - Bot - MD', {
   font: 'chrome',
   align: 'center',
   gradient: ['red', 'magenta']
 })
-say(`'${name}' By @${author.name || author}`, {
+say(`Bot creado por Bruno Sobrino`, {
   font: 'console',
   align: 'center',
   gradient: ['red', 'magenta']
@@ -61,7 +61,7 @@ function start(file) {
   })
   p.on('exit', (_, code) => {
     isRunning = false
-    console.error('Exited with code:', code)
+    console.error('❎ㅤOcurrio un error inesperado:', code)
     if (code === 0) return
     watchFile(args[0], () => {
       unwatchFile(args[0])
